@@ -1,0 +1,18 @@
+<!--
+    templateType: page
+    label: Page template
+    isAvailableForNewContent: true
+-->
+
+{% extends "../layout/base.html" %}
+
+
+
+
+{% block body %}
+
+  <p>TEST PAGE</p>
+
+  {% module "rich_text_one" label="Rich Text" path="../../modules/rich-text.module" %}
+
+{% endblock %}

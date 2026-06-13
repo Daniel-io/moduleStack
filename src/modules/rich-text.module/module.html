@@ -1,0 +1,23 @@
+{# module class: rt #}
+
+
+{# shorthand vars #}
+{% set module_id = moduel.settings.custom_id or 'rt' ~ name|replace('module_', '')|replace('widget_','') %}
+
+
+
+{# module class list #}
+{% set module_classes = ['rt'] %}
+  {% do module_classes.append( module.settings.custom_classes ) if module.settings.custom_classes %}
+{% set module_classes = module_classes|join(' ') %}
+
+
+{# markup #}
+<div id={{ module_id }} class="{{ module_classes }}">
+  {{ module.text }}
+  {{ module.settings.custom_classes }}
+  {{ module.settings.custom_id }}
+  {{ module.settings.custom_data_attributes }}
+</div>
+
+

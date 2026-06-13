@@ -5,27 +5,22 @@ label: base
 -->
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ content.html_title }}</title>
+    <meta name="description" content="{{ content.meta_description }}">
+    {{ standard_header_includes }}
+  </head>
+  <body>
+    {% module "page_template_logo" path="@hubspot/logo" label="Logo" %}
+    {% module "page_template_rich_text" path="@hubspot/rich_text" label="Rich Text" %}
 
-  <title>Page Title</title>
-  <meta name="description" content="Page description">
+    {% block body %}
 
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/js/main.js" defer></script>
-</head>
-<body>
+    {% endblock %}
 
-  <header></header>
-
-  <main>
-    <h1>Hello World</h1>
-  </main>
-
-  <footer></footer>
-
-</body>
+    {{ standard_footer_includes }}
+  </body>
 </html>
