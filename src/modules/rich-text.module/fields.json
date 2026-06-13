@@ -1,12 +1,11 @@
 [
   {
     "default": "<h1>Hello, world!</h1>",
-    "label": "Rich text field",
-    "locked": false,
-    "name": "text",
-    "required": false,
+    "name": "html",
+    "label": "html",
     "type": "richtext",
-    "validation_regex": ""
+    "locked": false,
+    "required": false
   }, {
     "id": "settings",
     "type": "group",
